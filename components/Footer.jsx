@@ -1,9 +1,11 @@
 const Footer = () => {
     return (
-        <div className=" h-28 flex justify-center items-center bg-gray-200 text-2xl">
-            All rights are reserved. &copy; 2025.
-        </div>
-    )
-}
+        <footer className="w-full py-6 bg-gray-800 text-center text-white text-lg md:text-xl shadow-md">
+            <p className="opacity-80 hover:opacity-100 transition-opacity">
+                &copy; 2025. All rights reserved.
+            </p>
+        </footer>
+    );
+};
 
-export default Footer
+export default Footer;

@@ -7,6 +7,8 @@ const nextConfig = {
       "i.pinimg.com",
       "www.symbols.com",
       "cdn.pixabay.com",
+      "source.unsplash.com",
+      "encrypted-tbn0.gstatic.com"
     ],
   },
 };

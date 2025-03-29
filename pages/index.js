@@ -8,36 +8,40 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-gray-100">
       <Head>
         <title>
-          Roomify : Top Online Hotel Booking Platform for a Safe & Comfortable Stay.
+          Roomify: Your Premier Online Hotel Booking Platform for Safe & Comfortable Stays
         </title>
       </Head>
       <Header1 />
       <Header2 />
       <Header3 />
-      <div className="mx-20">
-        <div className=" my-14">
+
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="my-10">
           <Image
-            src={"/banner1.avif"}
-            alt="banner1"
-            width={200}
-            height={200}
-            className=" h-80 w-full"
+            src={"/banner2.jpg"}
+            alt="Luxury Hotel Banner"
+            width={1600}
+            height={400}
+            className="w-full h-80 object-cover rounded-lg shadow-lg"
           />
         </div>
-        <div className="mb-14">
+
+        <div className="mb-10">
           <Image
-            src={"/banner2.avif"}
-            alt="banner1"
-            width={200}
+            src={"/banner1.jpg"}
+            alt="Comfortable Room Banner"
+            width={1600}
             height={200}
-            className=" h-40 w-full"
+            className="w-full h-40 object-cover rounded-lg shadow-md"
           />
         </div>
+
         <Header4 />
       </div>
+
       <Footer />
     </div>
   );

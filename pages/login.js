@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
     const [name, setName] = useState("");
@@ -53,67 +53,69 @@ const Login = () => {
     return (
         <div>
             <Head>
-                <title>Roomify - Login</title>
+                <title>Roomify - {login ? "Login" : "Sign Up"}</title>
             </Head>
-            <div className="flex h-screen justify-center items-center bg-gray-100">
-                <div className="absolute top-10 px-10 text-center">
-                    <h2 className="text-5xl font-bold text-red-600">Roomify</h2>
-                    <p className="text-lg font-semibold text-gray-700">
-                        Hotels and stays across 800 cities, 24+ countries
-                    </p>
-                </div>
-                <div className="flex justify-center items-center w-9/12">
-                    <div className="text-gray-800">
-                        <p className="font-bold text-4xl text-justify">
+
+            <div className="flex min-h-screen items-center justify-center bg-gray-100 px-4">
+                <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg flex flex-col lg:flex-row p-6 lg:p-10">
+
+                    {/* Left Section */}
+                    <div className="lg:w-1/2 flex flex-col justify-center text-gray-800 p-5">
+                        <h2 className="text-3xl lg:text-4xl font-bold mb-3">
                             Experience a Smarter Way to Book Stays
-                        </p>
-                        <p className="text-lg mt-5 text-justify">
+                        </h2>
+                        <p className="text-lg text-gray-600">
                             Sign up now and enjoy exclusive discounts on Roomify stays.
                             Get access to unbeatable offers and savings on your travels.
                         </p>
                     </div>
-                    <div className="ml-10 pb-10 w-10/12 bg-white shadow-lg rounded-lg p-8">
-                        <p className="h-12 flex items-center justify-center bg-red-500 text-lg font-bold text-white rounded-t-lg">
+
+                    {/* Right Section */}
+                    <div className="lg:w-1/2 bg-gray-50 p-6 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold text-center bg-red-500 text-white py-3 rounded-t-lg">
                             Sign Up & Get ₹500 Roomify Credits
                         </p>
-                        <div className="p-6">
-                            <h3 className="text-4xl font-bold my-5 text-gray-800">
+                        <div className="p-5">
+                            <h3 className="text-3xl font-bold my-3 text-gray-800 text-center">
                                 {login ? "Login" : "Sign Up"}
                             </h3>
-                            <p className="font-semibold text-md mb-3 text-gray-600">
+                            <p className="text-md text-gray-600 text-center mb-5">
                                 Enter your details to continue
                             </p>
+
                             {!login && (
                                 <input
                                     type="text"
                                     placeholder="Enter your name..."
-                                    className="outline-none border my-3 border-gray-300 px-4 py-2 w-full rounded-lg"
+                                    className="outline-none border border-gray-300 px-4 py-3 w-full rounded-lg mb-4"
+                                    value={name}
                                     onChange={(e) => setName(e.target.value)}
                                 />
                             )}
                             <input
                                 type="email"
                                 placeholder="Enter your email..."
-                                className="outline-none border my-3 border-gray-300 px-4 py-2 w-full rounded-lg"
+                                className="outline-none border border-gray-300 px-4 py-3 w-full rounded-lg mb-4"
+                                value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             <input
                                 type="password"
                                 placeholder="Enter your password..."
-                                className="outline-none border my-3 border-gray-300 px-4 py-2 w-full rounded-lg"
+                                className="outline-none border border-gray-300 px-4 py-3 w-full rounded-lg mb-4"
+                                value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                             <button
                                 type="submit"
-                                className="w-full h-12 text-lg font-bold bg-red-500 hover:bg-red-600 text-white my-5 rounded-lg transition duration-300"
+                                className="w-full py-3 text-lg font-bold bg-red-500 hover:bg-red-600 text-white rounded-lg transition duration-300"
                                 onClick={login ? handleLogin : handleSignup}
                             >
                                 {login ? "Login" : "Sign Up"}
                             </button>
-                            <p className="text-md text-center text-gray-700">
-                                {login
-                                    ? "Don't have an account?"
-                                    : "Already have an account?"}
+
+                            <p className="text-center text-gray-700 mt-4">
+                                {login ? "Don't have an account?" : "Already have an account?"}
                                 <span
                                     className="ml-1 text-red-600 font-semibold cursor-pointer border-b border-red-500"
                                     onClick={handleToggle}
