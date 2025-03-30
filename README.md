@@ -1,40 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+## **Hotel Booking Platform**  
 
-## Getting Started
+A modern and responsive **hotel booking platform** built with **Next.js, Tailwind CSS, and Express.js**, featuring filtering, price-based search, and a detailed hotel page.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## **🚀 Features**  
+✅ **Hotel Listings** - Browse available hotels with images and descriptions.  
+✅ **Filters** - Filter hotels by **price** and **facilities**.  
+✅ **Responsive Design** - Works on all screen sizes.  
+✅ **Dynamic Routing** - Each hotel has a **detailed page**.  
+✅ **Fast API Calls** - Uses **server-side fetching (SSR)** for hotel data.  
+
+---
+
+## **💻 Installation & Setup**  
+
+### **1️⃣ Clone the Repository**  
+```sh
+git clone https://github.com/kavitab7/Roomify_nextjs_web.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **2️⃣ Install Dependencies**  
+```sh
+npm install
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### **3️⃣ Set Up Environment Variables**  
+Create a `.env.local` file and add:  
+```
+BASE_URL=http://localhost:3000
+MONGO_URI=your-mongodb-connection-string
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### **4️⃣ Start the Development Server**  
+```sh
+npm run dev
+```
+➡ The project will be live at **`http://localhost:3000`**  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **📸 Screenshots**  
+![Screenshot (12)](https://github.com/user-attachments/assets/6b2a1d3d-6723-4289-a860-a7752183a1ea)
+![Screenshot (14)](https://github.com/user-attachments/assets/e0d332b5-9213-4917-b12b-64d2c11d3fa5)
+![Screenshot (16)](https://github.com/user-attachments/assets/b72ac3e6-f5d6-4b8a-a654-b094e75f2381)
+![Screenshot (13)](https://github.com/user-attachments/assets/aa364a5f-6e66-454f-b366-ec8846afcb0c)
+![Screenshot (15)](https://github.com/user-attachments/assets/3356b922-3a1d-40b2-b9a5-180b3d294b93)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---
